@@ -1,0 +1,17 @@
+#A Number is said to be strong number if the sum of factorial of each digit is equal to the number itself.
+
+n = int(input("Enter number to find strong or not: "))
+sum1 = 0
+temp = n
+while(temp>0):
+  f, i = 1, 1
+  r = temp%10
+  while(i<=r):
+    f *= i
+    i += 1
+  sum1 += f
+  temp //= 10
+if(sum1 == n):
+  print("The given number", n,"is a strong number")
+else:
+  print("The given number", n,"is not a strong number")
